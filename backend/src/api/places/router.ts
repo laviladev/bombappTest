@@ -1,10 +1,10 @@
-import { Router } from "express"
+import HyperExpress from "hyper-express"
 import routerTypes from "./placesTypes/router"
 import * as controllers from "./controller"
 const { list, getPlaceById, getPlacesByUser, create, update, deletePlace } =
   controllers
 
-const router = Router()
+const router = new HyperExpress.Router()
 
 // TODO: Add admin authorization
 router.use("/types", routerTypes)
