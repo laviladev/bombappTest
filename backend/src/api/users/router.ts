@@ -1,8 +1,8 @@
-import { Router } from "express"
+import HyperExpress from "hyper-express"
 import { validateUser } from "../middlewares/validator"
 import { list, get, create, login } from "./controller"
 
-const router = Router()
+const router = new HyperExpress.Router()
 
 router.get("/", list)
 

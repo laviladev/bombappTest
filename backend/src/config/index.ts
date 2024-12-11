@@ -5,7 +5,7 @@ dotenv.config()
 const config = {
   http: {
     host: process.env.HTTP_HOST || "0.0.0.0",
-    port: process.env.PORT || process.env.HTTP_PORT,
+    port: Number(process.env.PORT) || Number(process.env.HTTP_PORT),
   },
   jwtKey: process.env.JWTKEY,
   database: {

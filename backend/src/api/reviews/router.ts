@@ -1,4 +1,4 @@
-import { Router } from "express"
+import HyperExpress from "hyper-express"
 import * as controllers from "./controller"
 const {
   list,
@@ -11,7 +11,7 @@ const {
   updateRating,
 } = controllers
 
-const router = Router()
+const router = new HyperExpress.Router()
 
 router.route("/").get(list)
 
